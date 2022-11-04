@@ -11,10 +11,12 @@ permalink: install-jekyll-on-windows-7
 ## Попытка 2 - Успешная
 
 1. [Установить MSYS2](https://www.msys2.org/)
+   
    - Обязятельно `pacman -S mingw-w64-x86_64-gcc`
 2. Установка Ruby
-   - `1 - MSYS2 base installation` - еще раз запустил на всякий
-
+   
+- `1 - MSYS2 base installation` - еще раз запустил на всякий
+   
 3. [Установка Jekyll](https://jekyllrb.com/)  `gem install bundler jekyll`
 
 4. Запуск `bundle exec jekyll serve`
@@ -31,6 +33,19 @@ permalink: install-jekyll-on-windows-7
    **Фикс**
 
    Добавить `gem "webrick"` в Gemfile
+
+## Проблема при запуске старого проекта
+
+- При запуске старого проекта выпадали предупреждения и не удавалось найти модуль `Could not find ffi-1.11.2 in any of the sources`
+- **Решение**
+  - Копировать Gemfile из рабочего модуля
+  - `bundle update`
+
+
+
+
+
+
 
 
 
